@@ -1,0 +1,2 @@
+Could not find generator 'migrate'. Maybe you meant 'migration', 'task' or 'generator'
+Run `rails generate --help` for more options.
