@@ -7,9 +7,14 @@ class StudentsController < ApplicationController
 
   def show
   end
+  
+  def activate_student_path
+    Student.update(params['id'], :active => !Student.find(params['id']).active)
+    @student = Student.find(params[:id])
+    render "show"
+  end
 
   private
-
     def set_student
       @student = Student.find(params[:id])
     end
